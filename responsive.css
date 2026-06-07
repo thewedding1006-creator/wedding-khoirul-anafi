@@ -1,0 +1,122 @@
+/* ============================================
+   DARK LUXURY WEDDING - Responsive
+   ============================================ */
+
+/* Mobile First — base styles in style.css target mobile */
+
+/* Tablet and up */
+@media (min-width: 480px) {
+  :root { --container-max: 440px; }
+  .mempelai-cards { flex-direction: row; gap: 20px; }
+  .mempelai-card { flex: 1; }
+  .mempelai-divider { writing-mode: horizontal-tb; }
+  .countdown-grid { gap: 16px; }
+  .gallery-grid { columns: 2; }
+}
+
+/* Small desktop */
+@media (min-width: 768px) {
+  :root { --container-max: 520px; }
+  .gallery-grid { columns: 3; }
+}
+
+/* Prevent overflow issues */
+@media (max-width: 360px) {
+  .countdown-grid { gap: 8px; }
+  .flip-num { font-size: 1.3rem; }
+  .nav-label { font-size: 0.38rem; }
+  .btn-open { padding: 14px 28px; }
+}
+
+/* Touch devices — remove hover states that don't make sense */
+@media (hover: none) {
+  .btn-open::before { display: none; }
+  .mempelai-photo-wrap:hover .mempelai-photo { transform: none; }
+  .mempelai-photo-wrap:hover .mempelai-photo-frame { box-shadow: none; }
+}
+
+/* Safe area insets for notch/island devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  #bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  #music-btn {
+    bottom: calc(90px + env(safe-area-inset-bottom));
+  }
+}
+
+/* High-res displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .loading-bar { box-shadow: 0 0 6px var(--gold); }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .section { padding: 40px 24px; }
+  #cover { min-height: auto; padding: 40px 24px; }
+  .loading-monogram { width: 70px; height: 70px; margin-bottom: 16px; }
+}
+
+/* Print */
+@media print {
+  #loading-screen, #bottom-nav, #music-btn, #particles-canvas, #lightbox { display: none !important; }
+  .section { page-break-inside: avoid; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ============================================
+   COVER CENTERING FIX — semua ukuran layar
+   ============================================ */
+
+/* Pastikan cover selalu 100% tinggi layar */
+#cover,
+#cover.section {
+  height: 100svh !important;
+  min-height: 100svh !important;
+  max-height: 100svh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+/* Cover inner selalu muat di layar */
+.cover-inner {
+  width: 100%;
+  max-width: 440px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Layar sangat kecil (iPhone SE, 375px) */
+@media (max-height: 680px) {
+  .cover-bismillah    { margin-bottom: 8px !important; font-size: 0.55rem !important; }
+  .cover-invitation-text { margin-bottom: 6px !important; }
+  .cover-names        { font-size: clamp(2.8rem, 12vw, 4.5rem) !important; }
+  .cover-ampersand    { font-size: clamp(2rem, 8vw, 3rem) !important; margin: -8px 0 !important; }
+  .cover-date-line    { margin: 10px 0 6px !important; }
+  .cover-guest-name   { margin-bottom: 14px !important; font-size: 1.1rem !important; }
+  .btn-open           { padding: 12px 28px !important; }
+}
+
+/* Layar sangat kecil height (landscape atau pendek) */
+@media (max-height: 580px) {
+  .cover-bismillah    { display: none; }
+  .cover-names        { font-size: clamp(2.4rem, 10vw, 3.5rem) !important; }
+  .cover-date-line    { margin: 8px 0 4px !important; }
+  .cover-guest-label  { display: none; }
+  .cover-guest-name   { margin-bottom: 10px !important; }
+}
