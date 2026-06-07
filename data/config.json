@@ -1,0 +1,63 @@
+{
+  "couple": {
+    "groom": {
+      "nickname": "Khoirul",
+      "fullname": "Khoirul Anwar",
+      "father": "Bpk. Tarjono (Alm.)",
+      "mother": "Ibu Aslik",
+      "photo": "assets/images/groom/groom.jpg"
+    },
+    "bride": {
+      "nickname": "Anafi",
+      "fullname": "Anafi Putri",
+      "father": "Bpk. Su'udi (Alm.)",
+      "mother": "Ibu Tri Ning",
+      "photo": "assets/images/bride/bride.jpg"
+    }
+  },
+  "event": {
+    "akad": {
+      "date": "2026-06-10",
+      "day": "Rabu",
+      "time": "10.00 WIB",
+      "venue": "KUA Pasar Kliwon",
+      "address": "Jl. Kapten Mulyadi No.278, Joyosuran, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57116"
+    },
+    "resepsi": {
+      "date": "2026-06-10",
+      "day": "Rabu",
+      "time": "19.00 WIB",
+      "venue": "Gedung Diponegoro",
+      "address": "Jl. Kaliwidas II No.2, Ps. Kliwon, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57118"
+    }
+  },
+  "loveStory": [],
+  "gift": {
+    "accounts": [
+      {
+        "bank": "BNI",
+        "number": "1230 183 142",
+        "holder": "Khoirul Anwar"
+      }
+    ],
+    "qris": false
+  },
+  "maps": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.8!2d110.8321!3d-7.5695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16b1d4d4d4d4%3A0x1!2sGedung+Diponegoro+Surakarta!5e0!3m2!1sid!2sid!4v1749300000",
+    "directionsUrl": "https://maps.google.com/?q=Gedung+Diponegoro+Jl+Kaliwidas+II+No+2+Surakarta"
+  },
+  "spreadsheet": {
+    "webAppUrl": "https://script.google.com/macros/s/AKfycbxaoxJf8H1lezyPg4kzTLBccNwovFU2U6kcN_ZzkjTMN7C6-fnsTuETcZfKpUx02G8QCw/exec"
+  },
+  "music": {
+    "src": "assets/music/wedding-song.mp3",
+    "autoplay": true
+  },
+  "seo": {
+    "hashtag": "#KhoirulAnafi2026",
+    "title": "The Wedding of Khoirul & Anafi",
+    "description": "Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir menyaksikan pernikahan kami. Rabu, 10 Juni 2026.",
+    "image": "assets/images/cover/og-image.jpg",
+    "url": "https://yourdomain.github.io"
+  }
+}

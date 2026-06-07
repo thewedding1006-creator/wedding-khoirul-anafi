@@ -1,0 +1,232 @@
+/* ============================================
+   DARK LUXURY WEDDING - Background Theme
+   Background sama di semua section
+   ============================================ */
+
+/* ── BODY BASE ── */
+body {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #0a0800;
+}
+
+/* ── LOADING SCREEN ── */
+#loading-screen {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+}
+#loading-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 0;
+}
+/* Canvas harus di belakang teks */
+#loading-canvas {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.3 !important;
+}
+/* Konten teks di atas canvas */
+#loading-screen > div:not(#loading-canvas),
+#loading-screen > *:not(canvas) {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* ── SEMUA SECTION: transparan supaya bg body tembus ── */
+.section {
+  background-color: transparent !important;
+  position: relative;
+}
+
+/* ── Overlay gelap di tiap section ── */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Cover - overlay tipis agar background foto terlihat */
+#cover::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.25) 40%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
+
+/* Semua section dalam - overlay lebih gelap agar teks terbaca */
+#quotes::before     { background: rgba(0,0,0,0.70); }
+#mempelai::before   { background: rgba(0,0,0,0.72); }
+#acara::before      { background: rgba(0,0,0,0.70); }
+#gallery::before    { background: rgba(0,0,0,0.75); }
+#maps::before       { background: rgba(0,0,0,0.72); }
+#countdown::before  { background: rgba(0,0,0,0.70); }
+#gift::before       { background: rgba(0,0,0,0.72); }
+#rsvp::before       { background: rgba(0,0,0,0.74); }
+#wishes::before     { background: rgba(0,0,0,0.72); }
+#thanks::before     { background: rgba(0,0,0,0.68); }
+
+/* ── Konten section di atas overlay ── */
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+.section .section-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── COVER background khusus ── */
+#cover .cover-bg {
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(201,168,76,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(160,120,48,0.10) 0%, transparent 50%);
+  z-index: 1;
+}
+
+/* ── AMBIENT GOLD GLOW di background ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 50% 30% at 15% 20%, rgba(201,168,76,0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 40% at 85% 70%, rgba(201,168,76,0.05) 0%, transparent 70%);
+  animation: ambientGlow 10s ease-in-out infinite alternate;
+}
+@keyframes ambientGlow {
+  0%   { opacity: 0.6; }
+  100% { opacity: 1.0; }
+}
+
+/* ── GLASS CARDS ── */
+.glass-card {
+  background: rgba(8,6,2,0.65) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+}
+.glass-card-gold {
+  background: linear-gradient(
+    135deg,
+    rgba(12,10,4,0.75),
+    rgba(6,5,2,0.88)
+  ) !important;
+  border: 1px solid var(--gold-muted) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  box-shadow:
+    0 0 20px rgba(201,168,76,0.06),
+    0 8px 32px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(201,168,76,0.12);
+}
+
+/* ── BANK CARDS ── */
+.bank-card {
+  background: linear-gradient(
+    135deg,
+    rgba(10,8,3,0.75),
+    rgba(18,14,5,0.85)
+  ) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* ── BOTTOM NAV ── */
+#bottom-nav {
+  background: rgba(3,2,1,0.90) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
+  border-top: 1px solid rgba(201,168,76,0.20) !important;
+}
+
+/* ── MUSIC BUTTON ── */
+#music-btn {
+  background: rgba(8,6,2,0.75) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* ── SECTION LABEL SHIMMER ── */
+.section-label {
+  background: linear-gradient(
+    90deg,
+    var(--gold-muted) 0%,
+    var(--gold-light) 50%,
+    var(--gold-muted) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerText 4s linear infinite;
+}
+@keyframes shimmerText {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── GALLERY ITEMS ── */
+.gallery-item {
+  background: rgba(5,4,1,0.6);
+}
+
+/* ── FORM INPUTS ── */
+.form-input, .form-select, .form-textarea {
+  background: rgba(255,255,255,0.04) !important;
+  backdrop-filter: blur(10px) !important;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  background: rgba(201,168,76,0.06) !important;
+}
+
+/* ── SECTION DIVIDER LINES ── */
+.section-divider::before {
+  background: linear-gradient(90deg, transparent, var(--gold)) !important;
+  opacity: 0.8;
+}
+.section-divider::after {
+  background: linear-gradient(90deg, var(--gold), transparent) !important;
+  opacity: 0.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  #cover {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    height: 100svh !important;
+    min-height: 100svh !important;
+  }
+}
+
+/* ── ORNAMENT CORNERS ── */
+.cover-ornament-tl,
+.cover-ornament-tr,
+.cover-ornament-bl,
+.cover-ornament-br {
+  opacity: 0.5 !important;
+}
+
+/* ── TIMELINE ── */
+.timeline::before {
+  box-shadow: 0 0 10px rgba(201,168,76,0.5);
+}
