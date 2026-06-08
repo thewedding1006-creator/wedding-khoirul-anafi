@@ -345,8 +345,7 @@
 
         // Scroll ke quotes
         window.scrollTo({ top: 0, behavior: 'instant' });
-        const quotes = document.getElementById('quotes');
-        if (quotes) quotes.scrollIntoView({ behavior: 'smooth' });
+       
 
         // Force semua elemen reveal yang visible langsung tampil
         setTimeout(() => {
