@@ -340,11 +340,11 @@
         // Izinkan scroll kembali
         document.body.classList.remove('cover-only');
 
+          // Scroll ke quotes
+        window.scrollTo({ top: 0, behavior: 'instant' });
+
         // Lepas cover-only — tampilkan semua section sekaligus
         if (main) main.classList.remove('cover-only');
-
-        // Scroll ke quotes
-        window.scrollTo({ top: 0, behavior: 'instant' });
        
 
         // Force semua elemen reveal yang visible langsung tampil
